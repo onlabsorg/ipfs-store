@@ -4,14 +4,14 @@ This is an [olojs] document store based on IPFS.
 
 
 
-## Getting started
+### Getting started
 Install via npm:
 
 ```
 npm install @onlabsorg/ipfs-store
 ```
 
-Create an ipfs-store:
+Create an IPFS store:
 
 ```js
 const IPFS = require('ipfs-core');
@@ -29,7 +29,7 @@ const items = await store.list('/path/to/dir');     // returns the array of chil
 ```
 
 Of course `write`, `delete` and `deleteAll` operations are not allowed, being
-the files stored on IPFS read-only. In order to modify an ipfs-store, you can
+the files stored on IPFS read-only. In order to modify an IPFS store, you can
 clone it to an olojs [MemoryStore], modify it and add it again to IPFS.
 
 ```js
@@ -48,7 +48,7 @@ license.
 
 
 
-## Related projects
+### Related projects
 * [olojs] is a distributed content management system
 * [olowiki] is a web interface that allows creating and modifying olojs
   documents
@@ -61,3 +61,4 @@ license.
 [js-ipfs]: https://github.com/ipfs/js-ipfs/blob/master/README.md
 [olowiki]: https://github.com/onlabsorg/olowiki
 [stilo]: https://github.com/onlabsorg/stilo/blob/main/README.md
+[MemoryStore]: https://github.com/onlabsorg/olojs/blob/master/docs/api/memory-store.md
