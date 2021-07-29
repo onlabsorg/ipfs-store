@@ -99,7 +99,19 @@ async function* listDeep (store, path) {
 }
 
 
+var ipfsNode = new olojs.Store();
+require('./lib/ipfs-node').then(ipfs => {ipfsNode = ipfs});
+
 
 module.exports = {
+    
     IPFSStore,
+    
+    stilo: {
+        
+        protocols: {
+            
+            ipfs: new IPFSStore(ipfsNode)
+        }
+    },
 }
