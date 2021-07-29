@@ -4,7 +4,7 @@ This is an [olojs] document store based on IPFS.
 
 
 
-### Getting started
+## Getting started
 Install via npm:
 
 ```
@@ -42,13 +42,13 @@ const newCID = await IPFSStore.create(ipfs, clone);
 
 
 
-### License
+## License
 This software is released under the [ISC](https://opensource.org/licenses/ISC) 
 license.
 
 
 
-### Related projects
+## Related projects
 * [olojs] is a distributed content management system
 * [olowiki] is a web interface that allows creating and modifying olojs
   documents
