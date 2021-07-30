@@ -42,6 +42,34 @@ const newCID = await IPFSStore.create(ipfs, clone);
 
 
 
+## Use ipfs-store as stilo plugin
+When installed as [stilo] plugin, this library adds the `ipfs:` protocol to
+your olojs documents package.
+
+In order to install `olojs-cli` as stilo plugin, type the following command
+from your [stilo] package root:
+
+```
+stilo install @onlabsorg/ipfs-store
+```
+
+Once you installed it, you can fetch, render or list the olojs documents
+stored on IPFS. Example:
+
+```
+stilo read ipfs://QmQnEkNLoSHWDukHoW7J8gFbikx6eGWx2FGv5t1nxo8Wy7/helloworld
+stilo list ipfs://QmQnEkNLoSHWDukHoW7J8gFbikx6eGWx2FGv5t1nxo8Wy7
+stilo render ipfs://QmQnEkNLoSHWDukHoW7J8gFbikx6eGWx2FGv5t1nxo8Wy7/helloworld
+```
+
+Of course the `ipfs:` protocol will be available also in your olojs documents:
+
+```
+<% hw = import 'ipfs://QmQnEkNLoSHWDukHoW7J8gFbikx6eGWx2FGv5t1nxo8Wy7/helloworld'
+```
+
+
+
 ## License
 This software is released under the [ISC](https://opensource.org/licenses/ISC) 
 license.
