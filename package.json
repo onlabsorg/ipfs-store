@@ -1,6 +1,6 @@
 {
     "name": "@onlabsorg/ipfs-store",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "olojs store backed by IPFS",
     "main": "index.js",
     "keywords": [

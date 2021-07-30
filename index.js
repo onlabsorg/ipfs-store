@@ -2,7 +2,6 @@ const pathlib = require('path');
 const olojs = require('@onlabsorg/olojs');
 
 
-
 class IPFSStore extends olojs.Store {
     
     constructor (ipfs, cid='') {
@@ -99,8 +98,8 @@ async function* listDeep (store, path) {
 }
 
 
-var ipfsNode = new olojs.Store();
-require('./lib/ipfs-node').then(ipfs => {ipfsNode = ipfs});
+
+const IPFSNode = require('./lib/ipfs-node');
 
 
 module.exports = {
@@ -111,7 +110,10 @@ module.exports = {
         
         protocols: {
             
-            ipfs: new IPFSStore(ipfsNode)
-        }
+            ipfs: new IPFSStore( IPFSNode([
+                'http://localhost:5001',
+                'http://ipfs.io'
+            ]) )
+        },        
     },
 }
