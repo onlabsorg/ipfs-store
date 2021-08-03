@@ -1,5 +1,8 @@
 const pathlib = require('path');
-const olojs = require('@onlabsorg/olojs');
+const olojs = {
+    Store: require('@onlabsorg/olojs/lib/store'),
+    MemoryStore: require('@onlabsorg/olojs/lib/memory-store')
+}
 
 
 class IPFSStore extends olojs.Store {
