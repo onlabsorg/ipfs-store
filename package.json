@@ -1,6 +1,6 @@
 {
     "name": "@onlabsorg/ipfs-store",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "olojs store backed by IPFS",
     "main": "index.js",
     "keywords": [
@@ -15,7 +15,7 @@
     "author": "Marcello Del Buono (m.delbuono@gmail.com)",
     "license": "ISC",
     "dependencies": {
-        "@onlabsorg/olojs": "^0.20.4",
+        "@onlabsorg/olojs": "0.20.x",
         "ipfs-core": "^0.7.0",
         "ipfs-http-client": "^51.0.0"
     },
