@@ -15,7 +15,7 @@
     "author": "Marcello Del Buono (m.delbuono@gmail.com)",
     "license": "ISC",
     "dependencies": {
-        "@onlabsorg/olojs": "0.20.x",
+        "@onlabsorg/olojs": "0.21.x",
         "ipfs-core": "^0.7.0",
         "ipfs-http-client": "^51.0.0"
     },
