@@ -1,15 +1,16 @@
 
 const IPFSStore = exports.IPFSStore = require("./lib/store");
-
-const IPFSNode = require('./lib/ipfs-node');
+const IPFSNode = exports.IPFSNode = require("./lib/ipfs-node");
 
 exports.stilo = {
+    
+    async __init__ (store) {
         
-    routes: {
-        
-        "/ipfs": new IPFSStore( IPFSNode([
+        const ipfs = IPFSNode([
             'http://localhost:5001',
             'http://ipfs.io'
-        ]) )
+        ]);
+        
+        store.mount('/ipfs', new IPFSStore(ipfs));
     }
 }
